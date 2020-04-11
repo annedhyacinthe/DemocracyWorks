@@ -1,0 +1,5 @@
+Project Requirements
+ - Form submits
+ - OCD-IDs are generated 
+ - Democracy Works Elections API is called correctly
+ - Returned elections are displayed to the user

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>election</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <h1 class="title is-1">Find My Elections</h1>
+    <form action="/" method="POST">
+        <div class="column is-three-fifths is-offset-one-fifth">
+            <div class="field">
+                <label class="label">Address</label>
+                 <div class="control">
+                <input name="address" class="input" type="text">
+                </div>
+        </div>
+
+        <div class="columns">
+
+            <div class="column is-one-third is-offset-one-fourth">
+                <div class="field">
+                    <label class="label">City</label>
+                     <div class="control">
+                    <input name="city" class="input" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-one-third">
+                <div class="field">
+                    <label class="label">State</label>
+                     <div class="control">
+                    <input name="state" class="input" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-one-third">
+                <div class="field">
+                    <label class="label">Zip Code</label>
+                     <div class="control">
+                    <input name="zip" class="input" type="text">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="control">
+            <button type="submit" value="submit" class="button is-link">Submit</button>
+        </div>
+
+    </form>
+    <script src="/check.js"></script>
+  </body>
+</html>
