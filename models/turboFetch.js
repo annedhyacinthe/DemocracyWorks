@@ -26,7 +26,6 @@ const fetchTurboState = async (state) => {
   return data;
 };
 
-
 module.exports = {
   fetchTurbo,
   fetchTurboState,

@@ -2,7 +2,7 @@ const turbo = require('../models/turboFetch');
 
 const getElection = async (req, res) => {
   const { city, state } = req.body;
-  console.log(city,state)
+  console.log(req.body)
   city
   if (city.length < 1) {
     const elections = await turbo.fetchTurboState(state.toLowerCase());
@@ -12,6 +12,7 @@ const getElection = async (req, res) => {
     res.render('elections', { elections });
   }
 };
+
 
 
 module.exports = {
