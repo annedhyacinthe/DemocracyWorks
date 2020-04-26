@@ -8,35 +8,37 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-    <h1 class="title is-1">Elections</h1>
-    <div class="tile is-ancestor ">
-        <div class="tile is-parent is-12 is-vertical">
-          <article class="tile is-child is-offset-one-fifth">
-            <div class="content ">
-              <% for (let id in elections) { %>
-            
-              <header class="card-header">
-                <div class="column is-one-third">
-                  Description: <%= elections[id].description %>
-                </div>
-      
-                <div class="column is-one-third">
-                  Date: <%= elections[id].date.slice(0,10) %>
-                </div>
-                  
-                <div class="column is-one-third">
-                  Type: <%= elections[id].type %> 
-                </div>
+    <a href="/" class="title is-1">Find My Elections</h1>
+    <% if (elections.length === 0) { %>
+      <h1 class="title is-2">No Elections Found</h1>
+    <%} else { %>  
+      <h1 class="title is-2">Elections</h1>
+      <div class="tile is-ancestor ">
+          <div class="tile is-parent is-12 is-vertical">
+            <article class="tile is-child is-offset-one-fifth">
+              <div class="content ">
                 
-              </header>
-              <% } %>
-              </div>
+                <% for (let id in elections) { %>
               
-            
-             
-      </article>
-    </div>
-</div>
-    <script src="/check.js"></script>
-  </body>
+                  <header class="card-header">
+                    <div class="column is-one-third">
+                      Description: <%= elections[id].description %>
+                    </div>
+          
+                    <div class="column is-one-third">
+                      Date: <%= elections[id].date.slice(0,10) %>
+                    </div>
+                      
+                    <div class="column is-one-third">
+                      Type: <%= elections[id].type %> 
+                    </div>
+                    
+                  </header>
+                <% } %>
+              </div> 
+            </article>
+          </div>
+      </div>
+    <% } %>   
+</body>
 </html>
