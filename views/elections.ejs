@@ -15,27 +15,26 @@
       <h1 class="title is-2">Elections</h1>
       <div class="tile is-ancestor ">
           <div class="tile is-parent is-12 is-vertical">
-            <article class="tile is-child is-offset-one-fifth">
-              <div class="content ">
+            <article class="tile is-child box">
+              
                 
                 <% for (let id in elections) { %>
               
-                  <header class="card-header">
-                    <div class="column is-one-third">
-                      Description: <%= elections[id].description %>
-                    </div>
-          
-                    <div class="column is-one-third">
-                      Date: <%= elections[id].date.slice(0,10) %>
-                    </div>
-                      
-                    <div class="column is-one-third">
-                      Type: <%= elections[id].type %> 
-                    </div>
-                    
-                  </header>
+                   
+                    <p class="title is-5">
+                      Description:</p>
+                    <p class="subtitle is-4"> <%= elections[id].description %></p>
+                  
+
+                    <p class="title is-5">
+                      Date:</p>
+                    <p class="subtitle is-4"><%= elections[id].date.slice(0,10) %></p>
+
+                    <p class="title is-5">Type:</p>
+                    <p class="subtitle is-4"> <%= elections[id].type %></p>
+                  
                 <% } %>
-              </div> 
+             
             </article>
           </div>
       </div>
